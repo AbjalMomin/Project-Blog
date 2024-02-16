@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(279deg, #D9AFD9 0%, #97D9E1 100%);
+}
+
+.container {
+    max-width: 66vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+
+
+.header {
+    margin-bottom: 2.8rem;
+}
+
+.header_title {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.header_desc {
+    max-width: 568px;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    margin: 0 auto;
+}
+
+.main {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+
+
+
+    /* To avoid media query use below property */
+
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+    justify-content: center; */
+}
+
+
+@media (min-width:935px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1380px) {
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1870px) {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(222, 217, 217);
+    border-radius: 8px;
+    background-color: #4158D0;
+    background-image: linear-gradient(342deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card_image {
+    position: relative;
+    overflow: hidden;
+    height: 7rem;
+}
+
+@media (min-width: 768px) {
+    .card_image_container {
+        height: 12rem;
+    }
+}
+
+
+.image {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card_title {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.main:hover .card {
+    opacity: 0.5;
+    filter: blur(3px);
+    transition: all 900ms;
+}
+
+.card:hover .card_image {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.main:hover .card:hover {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.card_heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(25, 22, 22);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.cardT_anchor:hover .card_heading {
+    color: rgb(0, 255, 251);
+    transition: all 500ms;
+}
+
+.card_desc {
+    color: rgb(44, 43, 43);
+    font-size: 1rem;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 50%;
+    background-color: rgb(32, 198, 216);
+}
+
+.author_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author_name {
+    color: rgb(36, 36, 187);
+}
+
+.author_date {
+    color: rgb(1, 1, 1);
+}
+
+.card_tag {
+    font-size: 0.79rem;
+    border: 1px solid rgb(40, 38, 38);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+    color: rgb(0, 0, 0);
+}
