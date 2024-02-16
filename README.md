@@ -1,2 +1,1 @@
-# Project-Blog
-Blogs website 
+A simple Blogs website 
